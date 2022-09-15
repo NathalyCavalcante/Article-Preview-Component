@@ -1,0 +1,293 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);   
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    max-width: 45.625rem;
+    height: 17.75rem; 
+    background-color: white; 
+    overflow: hidden;
+    box-shadow: 5px 20px 20px hsl(215, 19%, 88%);
+    border-radius: 0.625rem;
+    align-items: center;
+}
+
+.img-container {
+    width: 17.75rem;
+    height: 17.5rem; 
+}
+
+.hero-img {
+    width: 17.75rem;
+    height: 17.5rem;  
+    object-fit: cover;
+    object-position: 0% 30%;
+}
+
+.container {
+    padding: 1.563rem;
+    padding: 1.875rem;
+}
+
+h1 {
+    color:hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: 1.375rem;
+    margin-top: 0;
+    margin-bottom: 0.882rem;
+}
+
+p {
+    color:hsl(214, 17%, 51%);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding-right: 10.5rem;
+    padding-left: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hero-footer {
+    display: flex;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 0.875rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    padding-bottom: 0.188rem;
+}
+
+.date {
+    color: hsl(212, 23%, 69%);
+    font-size: 0.75rem;
+}
+
+.btn-share {
+    border: none;
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+    cursor: pointer;
+}     
+
+.btn-share:hover {
+    background-color: hsl(214, 17%, 51%);
+}
+
+.btn-share:hover svg path {
+    fill: white;
+}
+ 
+.share-container {
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    z-index: 1;
+    left: 56.25rem;
+    top: 28.25rem;
+    flex-direction: row;
+    width: 15.625rem;
+    height: 3.938rem;
+    border-radius: 0.625rem;
+    padding: 0.938rem 1.875rem;
+}
+
+.share-container ul {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.share-container li {
+    margin-right: 18px;
+}
+
+.share-container p {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color:hsl(212, 23%, 69%);
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.share-container button {       
+  background-color: hsl(217, 19%, 35%);
+  width: 0.625rem;
+  height: 0.625rem;
+} 
+
+.share-container svg path {
+    fill: hsl(217, 19%, 35%);
+} 
+    
+.attribution {
+   display: none;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 48rem) {
+
+    body {             
+        padding: 1.563rem;
+        margin: 0;
+    }
+
+    .hero {       
+        display: flex;
+        flex-direction: column;
+        height: 32.352rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-container {
+        width: 20.325rem;
+        height: 12.8rem;
+    }
+
+    .hero-img {
+        height: 12.5rem;
+        width: 100%;
+     }
+
+    .container {
+        padding: 1.563rem;
+    }
+    
+    h1 {
+       font-size: 1.063rem;
+       margin-top:  0.882rem;
+       margin-bottom:  0.882rem; 
+    }
+
+    p {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        padding-right: 2.5rem;
+        padding-left: 0;
+        margin-top: 1rem;
+    }  
+
+    .hero-footer {
+        margin-top: 0;
+    }
+  
+    .avatar-container {
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .btn-share {
+        margin-right: 0;
+    }     
+
+    /* only shown when the share button is clicked. */
+
+    .share-container {
+       
+        justify-content: space-between;
+        left: 0;
+        width: 20.375rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    
+    .share-container ul {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    }
+
+    .share-container li {
+    margin-right: 18px;
+    }
+
+    .share-container p {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color:hsl(212, 23%, 69%);
+    margin-right: 20px;
+    margin-bottom: 0;
+    }
+
+    .share-container ul {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+    }
+
+   .share-container li {
+        margin-right: 18px;
+    }
+
+   .share-container p {
+        margin: 0;
+    }
+ 
+    .share-container button {       
+      background-color: hsl(214, 17%, 51%);
+      width: 1.875rem;
+      height: 1.875rem;
+    }
+
+   .share-container svg path {
+        fill: white;
+    }
+        
+    .attribution {
+        display: none;
+    }
+
+    .show {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+} 
